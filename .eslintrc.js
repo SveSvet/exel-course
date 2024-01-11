@@ -8,5 +8,6 @@ module.exports = {
   extends: ['eslint:recommended', 'google'],
   rules: {
     'require-jsdoc': 'off',
+    'max-len': ['error', {'code': 120}],
   },
 };
