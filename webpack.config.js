@@ -94,7 +94,6 @@ module.exports = (env, argv) => {
             {
               loader: 'file-loader',
               options: {
-                // Определите путь, где файлы будут помещены и их публичные URL
                 outputPath: 'fonts/',
                 publicPath: path.resolve(__dirname, 'src', 'assets', 'fonts'),
               },
