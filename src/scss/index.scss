@@ -1,6 +1,11 @@
 @import "~normalize.css";
 @import "./fonts.scss";
 
+@import "components/header";
+@import "components/toolbar";
+@import "components/formula";
+@import "components/table";
+
 $dark: #666;
 
 * {
@@ -15,4 +20,8 @@ body {
   font-weight: 400;
   font-size: 12px;
   background: $dark;
+}
+
+.exel {
+
 }
