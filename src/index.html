@@ -6,14 +6,50 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
   <title>Exel cource</title>
 </head>
 <body>
   <div id="app" class="container">
     <div class="excel">
-      <div class="excel__header"></div>
-      <div class="excel__toolbar"></div>
-      <div class="excel__formula"></div>
+      <div class="excel__header">
+        <input type="text" name="" id="" class="input" value="Новая таблица" />
+        <div>
+          <button class="button">
+            <span class="material-icons">clear</span>
+          </button>
+          <button class="button">
+            <span class="material-icons">logout</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="excel__toolbar">
+        <button class="button">
+          <span class="material-icons">format_bold</span>
+        </button>
+        <button class="button">
+          <span class="material-icons">format_underlined</span>
+        </button>
+        <button class="button">
+          <span class="material-icons">format_italic</span>
+        </button>
+        <button class="button">
+          <span class="material-icons">format_align_left</span>
+        </button>
+        <button class="button">
+          <span class="material-icons">format_align_right</span>
+        </button>
+        <button class="button">
+          <span class="material-icons">format_align_center</span>
+        </button>
+      </div>
+
+      <div class="excel__formula">
+        <div class="info">fx</div>
+        <div class="input" contenteditable spellcheck="false"></div>
+      </div>
       <div class="excel__table"></div>
     </div>
   </div>
