@@ -88,6 +88,18 @@ module.exports = (env, argv) => {
           use: 'ts-loader',
           exclude: /node_modules/,
         },
+        {
+          test: /\.(ttf|woff|woff2|eot|otf)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                outputPath: 'fonts/',
+                publicPath: path.resolve(__dirname, 'src', 'assets', 'fonts'),
+              },
+            },
+          ],
+        },
       ],
     },
   };
