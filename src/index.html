@@ -11,46 +11,35 @@
   <title>Exel cource</title>
 </head>
 <body>
-  <div id="app" class="container">
-    <div class="excel">
-      <div class="excel__header">
-        <input type="text" name="" id="" class="input" value="Новая таблица" />
-        <div>
-          <button class="button">
-            <span class="material-icons">clear</span>
-          </button>
-          <button class="button">
-            <span class="material-icons">logout</span>
-          </button>
+  <div id="app">
+    <div class="db">
+      <div class="db__header">
+        <h1>Excel dashboard</h1>
+      </div>
+
+      <div class="db__new">
+        <div class="db__view">
+          <a href="#" class="db__create">New <br> table</a>
         </div>
       </div>
 
-      <div class="excel__toolbar">
-        <button class="button">
-          <span class="material-icons">format_bold</span>
-        </button>
-        <button class="button">
-          <span class="material-icons">format_underlined</span>
-        </button>
-        <button class="button">
-          <span class="material-icons">format_italic</span>
-        </button>
-        <button class="button">
-          <span class="material-icons">format_align_left</span>
-        </button>
-        <button class="button">
-          <span class="material-icons">format_align_right</span>
-        </button>
-        <button class="button">
-          <span class="material-icons">format_align_center</span>
-        </button>
-      </div>
+      <div class="db__table db__view">
+        <div class="db__list-header">
+          <span>Name</span>
+          <span>Date of opening</span>
+        </div>
 
-      <div class="excel__formula">
-        <div class="info">fx</div>
-        <div class="input" contenteditable spellcheck="false"></div>
+        <ul class="db__list">
+          <li class="db__record">
+            <a href="#">Document 1</a>
+            <p class="db__date">14.01.2024</p>
+          </li>
+          <li class="db__record">
+            <a href="#">Document 2</a>
+            <p class="db__date">13.01.2024</p>
+          </li>
+        </ul>
       </div>
-      <div class="excel__table"></div>
     </div>
   </div>
 </body>
