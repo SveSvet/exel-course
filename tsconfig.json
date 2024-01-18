@@ -5,8 +5,6 @@
     "module": "es6",
     "target": "es5",
     "jsx": "react",
-    "moduleResolution": "node",
-    "files": ["*.ts", "*.tsx"],
-    "rules": {}
+    "moduleResolution": "node"
   }
 }
