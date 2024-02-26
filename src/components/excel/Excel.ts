@@ -17,20 +17,24 @@ export class Excel {
   }
 
   getRoot() {
-    const root: HTMLElement = $.create('div', 'excel');
+    const root = $.create('div', 'excel');
 
-    this.components.forEach((Component) => {
-      const el: HTMLElement = $.create('div', Component.className);
+    this.components = this.components.map((Component) => {
+      const el = $.create('div', Component.className);
       const component = new Component(el);
-      el.innerHTML = component.toHTML();
+      el.html(component.toHTML());
       root.append(el);
+      return component;
     });
 
     return root;
   }
 
   render() {
-    const node: HTMLElement | void = this.getRoot();
+    const node = this.getRoot().$el;
     this.element.append(node);
+    console.log(this.components);
+
+    this.components.forEach((component) => component.init());
   }
 }

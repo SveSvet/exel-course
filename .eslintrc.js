@@ -22,6 +22,7 @@ module.exports = {
     'require-jsdoc': 'off',
     'max-len': ['error', { 'code': 120 }],
     'object-curly-spacing': [2, 'always'],
+    'operator-linebreak': 'off',
   },
   settings: {
     react: {
