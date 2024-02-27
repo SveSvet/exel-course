@@ -23,6 +23,11 @@ class Dom {
     return this;
   }
 
+  on(eventType: string, callback: () => void) {
+    this.$el.addEventListener(eventType, callback);
+    return this;
+  }
+
   append(node: HTMLElement | Dom) {
     if (node instanceof Dom) {
       node = node.$el;
