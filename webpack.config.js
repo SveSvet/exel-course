@@ -16,7 +16,7 @@ module.exports = (env, argv) => {
       }),
       new CopyWebpackPlugin({
         patterns: [
-          {from: path.resolve(__dirname, 'src', 'favicon.ico'),
+          { from: path.resolve(__dirname, 'src', 'favicon.ico'),
             to: path.resolve(__dirname, 'dist'),
           },
         ],
@@ -49,7 +49,7 @@ module.exports = (env, argv) => {
       clean: true,
     },
     resolve: {
-      extensions: ['.js', 'ts', '.tsx'],
+      extensions: ['.js', '.ts', '.tsx'],
       alias: {
         '@': path.resolve(__dirname, 'src'),
         '@core': path.resolve(__dirname, 'src', 'core'),
@@ -87,6 +87,18 @@ module.exports = (env, argv) => {
           test: /\.tsx?$/,
           use: 'ts-loader',
           exclude: /node_modules/,
+        },
+        {
+          test: /\.(ttf|woff|woff2|eot|otf)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                outputPath: 'fonts/',
+                publicPath: path.resolve(__dirname, 'src', 'assets', 'fonts'),
+              },
+            },
+          ],
         },
       ],
     },

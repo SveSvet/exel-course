@@ -1,22 +1,13 @@
 import './scss/index.scss';
+import { Excel } from './components/excel/Excel';
+import { Header } from './components/header/Header';
+import { Toolbar } from './components/toolbar/Toolbar';
+import { Formula } from './components/formula/Formula';
+import { Table } from './components/table/Table';
 
-const id: Node = document.getElementById('app');
-console.log('Hello, world!');
+const excel = new Excel(
+    '#app',
+    { components: [Header, Toolbar, Formula, Table],
+    });
 
-
-function sleep(time: number = 1000): Promise<number> {
-  return new Promise<number>((resolve: (value: number) => void) => {
-    setTimeout(() => {
-      resolve(1000);
-    }, time)
-  })
-}
-
-async function start() {
-  console.log('first')
-  await sleep(4000)
-  console.log('second')
-}
-
-start()
-
+excel.render();
